@@ -4,7 +4,16 @@ Dockerfile for EC-CUBE 3.x
 ## What's this
 
 Development environment for [EC-CUBE 3.x](https://github.com/EC-CUBE/ec-cube)
+
+* Components
+    * [Docker Official PHP](https://registry.hub.docker.com/_/php/)
+        * Apache/2.4.10 (Debian)
+        * PHP 5.4.41
+    * [Docker Official PostgreSQL](https://registry.hub.docker.com/_/postgres/)
+        * PostgreSQL 9.2.11
+
 Please check the repository for EC-CUBE 3.x.
+
 
 ## How to Build Image
 
