@@ -5,7 +5,7 @@ MAINTAINER Yuichi Saotome <y@sotm.jp>
 ENV PGUSER postgres
 ENV ECCUBE_PATH /var/www/ec-cube
 
-ENV ECCUBE_BRANCHE eccube-3.0.0-dev
+ENV ECCUBE_BRANCHE eccube-3.0.0-beta
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
         git vim curl wget sudo libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libmcrypt-dev libxml2-dev libpq-dev libpq5 postgresql-client \
