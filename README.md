@@ -17,27 +17,57 @@ This is always build the latest version.
 Does not meet the [recommended system requirements](https://github.com/EC-CUBE/ec-cube#verβの確認環境不具合).
 Before build, please check the repository of EC-CUBE 3.x.
 
+### Supported tags and respective Dockerfile links
+* [`3.0.0-dev`, `latest` _(3.0.0-dev/Dockerfile)_](https://github.com/ysaotome/docker-ec-cube3/blob/3.0.0-dev/Dockerfile)
+* [`3.0.0-beta` _(3.0.0-beta/Dockerfile)_](https://github.com/ysaotome/docker-ec-cube3/blob/3.0.0-beta/Dockerfile)
+
 ## How to Build Image
 
 * git clone
+    * tag `latest`
 
-    ```zsh
-    git clone https://github.com/ysaotome/docker-ec-cube3.git
-    ```
+        ```zsh
+        git clone https://github.com/ysaotome/docker-ec-cube3.git
+        ```
+
+    * ex) tag `3.0.0-beta`
+
+        ```zsh
+        git clone -b 3.0.0-beta https://github.com/ysaotome/docker-ec-cube3.git
+        ```
 
 * docker build
+    * tag `latest`
 
-    ```zsh
-    docker build --rm -t ysaotome/ec-cube3 docker-ec-cube3
-    ```
+        ```zsh
+        docker build --rm \
+            -t ysaotome/ec-cube3 \
+            docker-ec-cube3/
+        ```
+
+    * ex) tag `3.0.0-beta`
+
+        ```zsh
+        docker build --rm \
+            -t ysaotome/ec-cube3:3.0.0-beta \
+            docker-ec-cube3/
+        ```
 
 ### Prebuild Image
 
 * pulling from docker hub
+    * tag `latest`
 
-    ```
-    docker pull ysaotome/ec-cube3
-    ```
+        ```
+        docker pull ysaotome/ec-cube3
+        ```
+
+    * ex) tag `3.0.0-beta`
+
+        ```
+        docker pull ysaotome/ec-cube3:3.0.0-beta
+        ```
+
 
 ## Example Usage
 
@@ -73,7 +103,7 @@ Before build, please check the repository of EC-CUBE 3.x.
     ```
 
 4. Let's Access in Browser
-    * ex)`http://localhost:8080/html/admin/`
+    * ex)```http://localhost:8080/admin```
     * ID: admin / PW: password
 
 5. Enter Container (Development)
@@ -92,5 +122,6 @@ Before build, please check the repository of EC-CUBE 3.x.
 
 ----
 * This software is released under the MIT License, see LICENSE.txt.
+
 
 
