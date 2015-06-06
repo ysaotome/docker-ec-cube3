@@ -73,7 +73,7 @@ Before build, please check the repository of EC-CUBE 3.x.
     ```
 
 4. Let's Access in Browser
-    * ex)```http://localhost:8080/admin```
+    * ex)`http://localhost:8080/html/admin/`
     * ID: admin / PW: password
 
 5. Enter Container (Development)
