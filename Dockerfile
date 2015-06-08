@@ -23,6 +23,8 @@ COPY config/php.ini ${PHP_INI_DIR}/
 RUN git clone -b ${ECCUBE_BRANCHE} https://github.com/EC-CUBE/ec-cube.git ${ECCUBE_PATH}
 
 RUN sed -i -e 's/^DBSERVER.*/DBSERVER=${POSTGRES_PORT_5432_TCP_ADDR}/g' ${ECCUBE_PATH}/eccube_install.sh
+## suggestion: http://qiita.com/ysaotome/items/2652be3e90d5c69df0f0#comment-339ea1b60cdfc8e22392
+RUN mv -f ${ECCUBE_PATH}/html/admin/index.html ${ECCUBE_PATH}/html/admin/index.html.org
 RUN echo "chown -R www-data:www-data ${ECCUBE_PATH}" >> ${ECCUBE_PATH}/eccube_install.sh
 RUN sed -i -e "s|/var/www/html|${ECCUBE_PATH}/html|g" /etc/apache2/apache2.conf
 RUN chmod +x ${ECCUBE_PATH}/eccube_install.sh
