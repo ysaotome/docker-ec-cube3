@@ -13,9 +13,9 @@ Development environment for [EC-CUBE 3.x](https://github.com/EC-CUBE/ec-cube).
         * PostgreSQL 9.2.11
 
 ### :bangbang: ATTENTION :bangbang:
-This is always build the latest version.
-Does not meet the [recommended system requirements](https://github.com/EC-CUBE/ec-cube#verβの確認環境不具合).
-Before build, please check the repository of EC-CUBE 3.x.
+This is always build the latest version.  
+Does not meet the [recommended system requirements](https://github.com/EC-CUBE/ec-cube#verβの確認環境不具合).  
+Before build, please check the repository of EC-CUBE 3.x.  
 
 ### Supported tags and respective Dockerfile links
 * [`3.0.0-dev`, `latest` _(3.0.0-dev/Dockerfile)_](https://github.com/ysaotome/docker-ec-cube3/blob/3.0.0-dev/Dockerfile)
