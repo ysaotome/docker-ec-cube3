@@ -3,7 +3,10 @@ Dockerfile for EC-CUBE 3.x
 
 ## What's this
 
-Development environment for [EC-CUBE 3.x](https://github.com/EC-CUBE/ec-cube).
+Development environment for [EC-CUBE 3.x](https://github.com/EC-CUBE/ec-cube).  
+
+* Japanese
+    * [Dockerで手軽に！今直ぐ試そう EC-CUBE 3.0 開発版 (Docker+Apache2.4+PHP5.4+PostgreSQL9.2)](http://qiita.com/ysaotome/items/2652be3e90d5c69df0f0) 
 
 * Components
     * [PHP](https://registry.hub.docker.com/_/php/)
