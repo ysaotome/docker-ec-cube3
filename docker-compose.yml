@@ -1,19 +1,28 @@
 version: "2"
 services:
-  postgres:
-    image: postgres:9.4
+  db:
+    image: nanasess/postgres84
     environment:
       - POSTGRES_USER=cube3_dev_user
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=cube3_dev
   eccube3:
-    build: eccube3/
-    environment:
-      - PGPASSWORD=password
-      - POSTGRES_ENV_POSTGRES_PASSWORD=password
+    build:
+      context: eccube3
+      args:
+        - ECCUBE_BRANCH=master
+        - ECCUBE_REPOS=https://github.com/EC-CUBE/ec-cube.git
+        - DBTYPE=pgsql
     ports:
       - 8080:80
     links:
-      - postgres
+      - db
+      - mailcatcher
     depends_on:
-      - postgres
+      - db
+      - mailcatcher
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - 1080:1080
+      - 1025:1025
